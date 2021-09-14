@@ -83,7 +83,9 @@ def storeDataFrame(df: DataFrame, stem: str, filetypes: list) -> int:
         message=f"Converting {stem} to different filetypes... "
     ) as spinner:
         for ft in filetypes:
-            if ft == "json":
+            if ft == "clipboard":
+                df.to_clipboard()
+            elif ft == "json":
                 df.to_json(stem + ".json")
             elif ft == "csv":
                 df.to_csv(stem + ".csv", sep=",")
