@@ -3,6 +3,7 @@ from pandas import DataFrame
 from progress.spinner import MoonSpinner
 
 from argparse import ArgumentParser, Namespace
+from pathlib import Path
 
 
 def parseArgs() -> Namespace:
@@ -13,14 +14,18 @@ def parseArgs() -> Namespace:
     parser.add_argument(
         "-i",
         "--input",
-        type=str,
         help="File to be converted to other outputs",
         required=True,
     )
-    parser.add_argument("--clipboard")
+    parser.add_argument(
+        "--clipboard",
+        help="Copy the data from the file to the system's clipboard",
+        action="store_true",
+        default=False,
+        required=False,
+    )
     parser.add_argument(
         "--csv",
-        type=bool,
         help="Convert the input to *.csv",
         action="store_true",
         default=False,
@@ -34,7 +39,6 @@ def parseArgs() -> Namespace:
     parser.add_argument("--html")
     parser.add_argument(
         "--json",
-        type=bool,
         help="Convert the input to *.json",
         action="store_true",
         default=False,
@@ -52,7 +56,6 @@ def parseArgs() -> Namespace:
     parser.add_argument("--timestamp")
     parser.add_argument(
         "--tsv",
-        type=bool,
         help="Convert the input to *.tsv",
         action="store_true",
         default=False,
@@ -60,6 +63,59 @@ def parseArgs() -> Namespace:
     )
     parser.add_argument("--xarray")
 
+    return parser.parse_args()
+
+
+def loadDataFrame(filename: str, filetype: str = ".json") -> DataFrame:
+    if filetype == ".json":
+        return pd.read_json(filename)
+    elif filetype == ".csv":
+        return pd.read_csv(filename, sep=",")
+    elif filename == ".tsv":
+        return pd.read_csv(filename, sep="\t")
+    else:
+        print("Unsupported import filetype")
+        return -1
+
+
+def storeDataFrame(df: DataFrame, stem: str, filetypes: list) -> int:
+    with MoonSpinner(
+        message=f"Converting {stem} to different filetypes... "
+    ) as spinner:
+        for ft in filetypes:
+            if ft == "json":
+                df.to_json(stem + ".json")
+            elif ft == "csv":
+                df.to_csv(stem + ".csv", sep=",")
+            elif ft == "tsv":
+                df.to_csv(stem + ".tsv", sep="\t")
+            else:
+                return filetypes.index(ft)
+            spinner.next()
+    return -1
+
 
 def main() -> None:
-    pass
+    args: Namespace = parseArgs()
+    argsDict: dict = args.__dict__
+
+    file: Path = Path(args.input)
+    fn: str = file.stem
+    ft: str = file.suffix
+
+    df: DataFrame = loadDataFrame(filename=args.input, filetype=ft)
+
+    fts: list = []
+    key: str
+    for key in argsDict.keys():
+        if argsDict[key] == True:
+            fts.append(key)
+
+    store: int = storeDataFrame(df, stem=fn, filetypes=fts)
+
+    if store != -1:
+        print(f"Unsupported format: {fts[store]}")
+
+
+if __name__ == "__main__":
+    main()
