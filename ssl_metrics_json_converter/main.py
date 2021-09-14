@@ -1,3 +1,6 @@
+# Documentation for the different exporters:
+# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_parquet.html
+
 import pandas as pd
 from pandas import DataFrame
 from progress.spinner import MoonSpinner
