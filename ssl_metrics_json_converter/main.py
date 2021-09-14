@@ -89,11 +89,11 @@ def storeDataFrame(df: DataFrame, stem: str, filetypes: list) -> int:
             if ft == "clipboard":
                 df.to_clipboard()
             elif ft == "json":
-                df.to_json(stem + ".json")
+                df.to_json(stem + ".json", index=False)
             elif ft == "csv":
-                df.to_csv(stem + ".csv", sep=",")
+                df.to_csv(stem + ".csv", sep=",", index=False)
             elif ft == "tsv":
-                df.to_csv(stem + ".tsv", sep="\t")
+                df.to_csv(stem + ".tsv", sep="\t", index=False)
             else:
                 return filetypes.index(ft)
             spinner.next()
