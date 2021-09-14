@@ -1,2 +1,4 @@
 pandas
 progress
+gtk
+PyQT4
