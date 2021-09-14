@@ -48,7 +48,12 @@ setup(
         "Operating System :: MacOS",
     ],
     python_requires=">=3.9",
-    install_requires=["pandas", "progress"],
+    install_requires=[
+        "gtk",
+        "pandas",
+        "progress",
+        "PyQT4",
+    ],
     entry_points={
         "console_scripts": [
             "ssl-metrics-json-converter = ssl_metrics_json_converter.main:main",
