@@ -2,6 +2,8 @@
 
 > Helper package to convert JSON to other formats and back again
 
+[![Publish to PyPi](https://github.com/SoftwareSystemsLaboratory/ssl-metrics-json-converter/actions/workflows/pypi.yml/badge.svg)](https://github.com/SoftwareSystemsLaboratory/ssl-metrics-json-converter/actions/workflows/pypi.yml)
+
 ## Table of Contents
 
 - [SSL Metrics JSON Converter](#ssl-metrics-json-converter)
