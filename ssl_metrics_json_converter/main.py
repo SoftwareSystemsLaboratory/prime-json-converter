@@ -1,12 +1,12 @@
 # Documentation for the different exporters:
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_parquet.html
 
+from argparse import ArgumentParser, Namespace
+from pathlib import Path
+
 import pandas as pd
 from pandas import DataFrame
 from progress.spinner import MoonSpinner
-
-from argparse import ArgumentParser, Namespace
-from pathlib import Path
 
 
 def parseArgs() -> Namespace:

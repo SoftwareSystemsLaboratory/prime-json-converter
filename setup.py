@@ -48,10 +48,9 @@ setup(
     ],
     python_requires=">=3.9",
     install_requires=[
-        "gtk",
-        "pandas",
-        "progress",
-        "PyQT4",
+        "pandas>=1.3.3",
+        "progress>=1.6",
+        "PyQT4>=4.11.4",
     ],
     entry_points={
         "console_scripts": [
