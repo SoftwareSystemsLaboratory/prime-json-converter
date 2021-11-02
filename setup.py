@@ -50,7 +50,6 @@ setup(
     install_requires=[
         "pandas>=1.3.3",
         "progress>=1.6",
-        "PyQT4>=4.11.4",
     ],
     entry_points={
         "console_scripts": [
