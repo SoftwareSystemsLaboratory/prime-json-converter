@@ -42,15 +42,14 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
         "Topic :: Software Development",
         "Topic :: Scientific/Engineering",
-        "Operating System :: Microsoft :: Windows",
         "Operating System :: POSIX",
         "Operating System :: Unix",
         "Operating System :: MacOS",
     ],
     python_requires=">=3.9",
     install_requires=[
-        "pandas",
-        "progress",
+        "pandas>=1.3.3",
+        "progress>=1.6",
     ],
     entry_points={
         "console_scripts": [
