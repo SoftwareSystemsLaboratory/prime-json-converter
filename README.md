@@ -22,6 +22,14 @@ This is a helper package to convert JSON to other data formats and turn those fo
 
 While this program can export to many formats, it **does not** allow you to customize how that file is changed from one filetype to another at this time.
 
+### Who is this application for?
+
+This application is for those that want to convert `.json` files into other formats via the python pandas library.
+
+### Credits
+
+[Software and Systems Laboratory](https://github.com/SoftwareSystemsLaboratory)
+
 ## How to Install
 
 ### Note on Command Line Arguments
