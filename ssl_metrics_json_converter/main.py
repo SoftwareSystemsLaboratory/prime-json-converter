@@ -1,5 +1,4 @@
 # Documentation for the different exporters:
-# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_parquet.html
 
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
