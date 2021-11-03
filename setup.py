@@ -49,8 +49,9 @@ setup(
     ],
     python_requires=">=3.9",
     install_requires=[
-        "pandas",
-        "progress",
+        "numpy>=1.21.3"
+        "pandas>=1.3.4",
+        "progress>=1.6",
     ],
     entry_points={
         "console_scripts": [
