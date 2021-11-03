@@ -48,7 +48,12 @@ setup(
     ],
     python_requires=">=3.9",
     install_requires=[
+<<<<<<< HEAD
         "pandas>=1.3.3",
+=======
+        "numpy>=1.21.3"
+        "pandas>=1.3.4",
+>>>>>>> dev
         "progress>=1.6",
     ],
     entry_points={
