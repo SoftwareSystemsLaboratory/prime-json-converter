@@ -8,8 +8,15 @@ from progress.spinner import MoonSpinner
 
 def parseArgs() -> Namespace:
     parser: ArgumentParser = ArgumentParser(
-        prog="SSL Metrics JSON Converter",
-        usage="Convert JSON into other datatypes and back again",
+        # TODO: Add program name
+        # TODO: Choose either Computation or Collection
+        # TODO: Add program usage
+        # TODO: Add program description
+        # TODO: Add program epilog
+        prog="SSL Metrics JSON Converter Utility",
+        usage="This utility converts between .json files and other filetypes",
+        description="This utility acts as an interface into pandas datatype conversion to allow for .json files to be converted into a variety of other formats",
+        epilog="Program created by Nicholas M. Synovic and George K. Thiruvathukal",
     )
     parser.add_argument(
         "-i",
