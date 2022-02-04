@@ -3,8 +3,8 @@
 > A `pandas` interface into converting `.json` files into other filetypes
 
 ![[https://img.shields.io/badge/python-3.9.6%20%7C%203.10-blue](https://img.shields.io/badge/python-3.9.6%20%7C%203.10-blue)](https://img.shields.io/badge/python-3.9.6%20%7C%203.10-blue)
-![[https://img.shields.io/badge/DOI-Example-red](https://img.shields.io/badge/DOI-Example-red)](https://img.shields.io/badge/DOI-Example-red)
-![[https://img.shields.io/badge/build-Example-red](https://img.shields.io/badge/build-Example-red)](https://img.shields.io/badge/build-Example-red)
+[![DOI](https://zenodo.org/badge/406267900.svg)](https://zenodo.org/badge/latestdoi/406267900)
+[![Release Project](https://github.com/SoftwareSystemsLaboratory/ssl-metrics-json-converter/actions/workflows/release.yml/badge.svg)](https://github.com/SoftwareSystemsLaboratory/ssl-metrics-json-converter/actions/workflows/release.yml)
 ![[https://img.shields.io/badge/license-BSD--3-yellow](https://img.shields.io/badge/license-BSD--3-yellow)](https://img.shields.io/badge/license-BSD--3-yellow)
 
 ## Table of Contents
