@@ -60,6 +60,8 @@ You can install the tool from PyPi with one of the following one liners:
 
 ### Command Line Arguements
 
+`ssl-metrics-json-converter -h`
+
 ```shell
 options:
   -h, --help            show this help message and exit
