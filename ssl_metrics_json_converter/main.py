@@ -1,5 +1,3 @@
-# Documentation for the different exporters:
-
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
 
