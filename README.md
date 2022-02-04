@@ -1,60 +1,83 @@
-# SSL Metrics JSON Converter
+# Software Systems Laboratory JSON Converter Project
 
-> Helper package to convert JSON to other formats and back again
+> A `pandas` interface into converting `.json` files into other filetypes
 
-[![Publish to PyPi](https://github.com/SoftwareSystemsLaboratory/ssl-metrics-json-converter/actions/workflows/pypi.yml/badge.svg)](https://github.com/SoftwareSystemsLaboratory/ssl-metrics-json-converter/actions/workflows/pypi.yml)
+![[https://img.shields.io/badge/python-3.9.6%20%7C%203.10-blue](https://img.shields.io/badge/python-3.9.6%20%7C%203.10-blue)](https://img.shields.io/badge/python-3.9.6%20%7C%203.10-blue)
+![[https://img.shields.io/badge/DOI-Example-red](https://img.shields.io/badge/DOI-Example-red)](https://img.shields.io/badge/DOI-Example-red)
+![[https://img.shields.io/badge/build-Example-red](https://img.shields.io/badge/build-Example-red)](https://img.shields.io/badge/build-Example-red)
+![[https://img.shields.io/badge/license-BSD--3-yellow](https://img.shields.io/badge/license-BSD--3-yellow)](https://img.shields.io/badge/license-BSD--3-yellow)
 
 ## Table of Contents
 
-- [SSL Metrics JSON Converter](#ssl-metrics-json-converter)
+- [Software Systems Laboratory JSON Converter Project](#software-systems-laboratory-json-converter-project)
   - [Table of Contents](#table-of-contents)
   - [About](#about)
-  - [How to Install](#how-to-install)
-    - [Note on Command Line Arguments](#note-on-command-line-arguments)
-    - [Required Dependencies](#required-dependencies)
-    - [From pip](#from-pip)
+  - [Developer Tooling](#developer-tooling)
+    - [Operating System](#operating-system)
+    - [Python Software](#python-software)
+  - [How To Use](#how-to-use)
+    - [Installation](#installation)
     - [Command Line Arguements](#command-line-arguements)
-      - [ssl-metrics-json-converter](#ssl-metrics-json-converter-1)
 
 ## About
 
-This is a helper package to convert JSON to other data formats and turn those formats into JSON.
+The Software Systems Laboratory (SSL) JSON Converter Project is an interface into the `pandas` libraries ability to convert `.json` files into other filetypes.
 
-While this program can export to many formats, it **does not** allow you to customize how that file is changed from one filetype to another at this time.
+This project is licensed under the BSD-3-Clause. See the [LICENSE](LICENSE) for more information.
 
-### Who is this application for?
+## Developer Tooling
 
-This application is for those that want to convert `.json` files into other formats via the python pandas library.
+To maximize the utility of this project the following software packages are **required**:
 
-### Credits
+### Operating System
 
-[Software and Systems Laboratory](https://github.com/SoftwareSystemsLaboratory)
+This tool **targets** Mac OS and Linux. SSL Metrics software is not supported or recommended to run on Windows *but can be modified to do so at your own risk*.
 
-## How to Install
+It is recomendded to run this tool on Mac OS or Linux. However, if you are on a Windows machine, you can use WSL to develop as well.
 
-### Note on Command Line Arguments
+### Python Software
 
-See [Command Line Arguments](#command-line-arguments) for program configuration from the command line
+> The software listed in this section is meant for developing tools
 
-### Required Dependencies
+All listed Python software assumes that you have downloaded and installed **Python 3.9.6** or greater.
 
-To copy to the clipboard on Linux, it is reccommended that you install:
+- `pandas`
+- `progress`
 
-- xsel (`sudo apt install xsel`)
-- xclip (`sudo apt install xclip`)
+You can install all of the Python software with one of the following one-liners:
 
-### From pip
+- `pip install --upgrade pandas pip progress`
+- `pip install --upgrade pip -r requirements.txt`
 
-1. Install `Python 3.9.6 +`
-2. (Recommended) Create a *virtual environment* with `python3.9 -m venv env` and *activate* it
-3. Run `pip install ssl-metrics-json-converter`
-4. Convert files with `ssl-metrics-json-converter -i FILENAME.* --*`
+## How To Use
+
+### Installation
+
+You can install the tool from PyPi with one of the following one liners:
+
+- `pip install ssl-metrics-meta`
+- `pip install ssl-metrics-json-converter`
 
 ### Command Line Arguements
 
-#### ssl-metrics-json-converter
+`ssl-metrics-json-converter -h`
 
-**NOTE:** This list has been concatenated. To view the full list of flags, run `ssl-metrics-json-converter -h`.
-
-- `-h`, `--help`: Shows the help menu and exits
-- `-i`, `--input`: The input file to be converted
+```shell
+options:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        File to be converted to other outputs
+  --clipboard           Copy the data from the file to the system's clipboard
+  --csv                 Convert the input to *.csv
+  --excel               Convert the input to *.xlsx
+  --feather             Convert the input to *.feather
+  --hdf                 Convert the input to *.hdf5
+  --html                Convert the input to *.html
+  --json                Convert the input to *.json
+  --latex               Convert the input to *.tex
+  --markdown            Convert the input to *.md
+  --parquet             Convert the input to *.parquet
+  --pickle              Convert the input to *.pkl
+  --stata               Convert input to *.dta
+  --tsv                 Convert the input to *.tsv
+```
