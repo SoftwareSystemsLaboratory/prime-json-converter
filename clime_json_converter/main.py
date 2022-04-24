@@ -8,6 +8,7 @@ from progress.spinner import MoonSpinner
 from clime_json_converter.args import mainArgs
 from clime_json_converter.version import version
 
+
 def loadDataFrame(filename: str, filetype: str = ".json") -> DataFrame:
     if filetype == ".json":
         return pd.read_json(filename)
