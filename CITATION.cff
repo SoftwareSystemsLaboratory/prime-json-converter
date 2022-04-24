@@ -11,9 +11,9 @@ authors:
   email: nsynovic@luc.edu
   affiliation: Loyola University Chicago
   orcid: 'https://orcid.org/0000-0003-0413-4594'
-  
-title: "SoftwareSystemsLaboratory/ssl-metrics-json-converter"
-version: 0.3.1
-doi: 10.5281/zenodo.5967929
+
+title: "SoftwareSystemsLaboratory/clime-json-converter"
+version: 0.4
+doi:
 date-released: 2022-02-04
-url: "https://github.com/SoftwareSystemsLaboratory/ssl-metrics-json-converter"
+url: "https://github.com/SoftwareSystemsLaboratory/clime-json-converter"
