@@ -39,7 +39,7 @@ def storeDataFrame(df: DataFrame, stem: str, filetypes: list) -> int:
             elif ft == "html":
                 df.to_html(stem + ".html", index=False)
             elif ft == "json":
-                df.to_json(stem + ".json", index=False)
+                df.to_json(stem + ".json", index=False, indent=4)
             elif ft == "latex":
                 df.to_latex(stem + ".tex", index=False)
             elif ft == "markdown":
