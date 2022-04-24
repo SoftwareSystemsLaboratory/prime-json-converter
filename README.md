@@ -37,6 +37,13 @@ You can install the tool from PyPi with one of the following one liners:
 `clime-json-converter -h`
 
 ``` shell
+usage: CLIME JSON Converter [-h] -i INPUT [--clipboard] [--csv] [--excel]
+                            [--feather] [--hdf] --html [--json] [--latex]
+                            [--markdown] [--parquet] [--pickle] [--stata]
+                            [--tsv]
+
+A tool to convert JSON files between different formats
+
 options:
   -h, --help            show this help message and exit
   -i INPUT, --input INPUT
@@ -54,4 +61,6 @@ options:
   --pickle              Convert the input to *.pkl
   --stata               Convert input to *.dta
   --tsv                 Convert the input to *.tsv
+
+Author(s): Nicholas M. Synovic, Matthew Hyatt, George K. Thiruvathukal
 ```
