@@ -1,5 +1,8 @@
 # CLIME JSON Converter Project
 
+[![DOI](https://zenodo.org/badge/406267900.svg)](https://zenodo.org/badge/latestdoi/406267900)
+[![Release Project](https://github.com/SoftwareSystemsLaboratory/clime-json-converter/actions/workflows/release.yml/badge.svg)](https://github.com/SoftwareSystemsLaboratory/clime-json-converter/actions/workflows/release.yml)
+
 > A tool to convert JSON files between different formats
 
 ## Table of Contents
