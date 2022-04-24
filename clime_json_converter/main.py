@@ -62,7 +62,7 @@ def main() -> None:
     args: Namespace = mainArgs()
 
     if args.version:
-        print(f"clime-git-commits-extract version {version()}")
+        print(f"clime-json-converter version {version()}")
         quit(0)
 
     argsDict: dict = args.__dict__
